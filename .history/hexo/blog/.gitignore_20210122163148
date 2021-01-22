@@ -1,9 +1,9 @@
 .DS_Store
 Thumbs.db
+.history
+
 db.json
 *.log
 node_modules/
 public/
 .deploy*/
-
-.history

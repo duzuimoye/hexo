@@ -1355,4 +1355,25 @@ dayjs(time) .locale(‘zh-cn’) .format(‘周 dd’)
   }
 ```
 
-toRefs
+2: toRefs()优化
+在 template 中，每次输出变量前面都要加一个 data，我们可以用 toRefs()函数就可以避免这种情况。
+
+```
+export default {
+  name: "App",
+  setup() {
+    const data: DataProps = reactive({
+      girls: ["亚丝娜", "冬马", "雪菜"],
+      selectGirl: "",
+      selectGirlFun: (index: number) => {
+        data.selectGirl = data.girls[index];
+      },
+    });
+    const refData = toRefs(data);
+
+    return {
+      ...refData,
+    };
+  },
+};
+```

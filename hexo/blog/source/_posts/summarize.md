@@ -1377,3 +1377,7 @@ export default {
   },
 };
 ```
+
+3：新增的生命周期 onRenderTracked 状态跟踪 onRenderTriggered 状态触发
+onRenderTracked 状态跟踪，它会跟踪页面上所有响应式变量和方法的状态。
+onRenderTriggered 状态触发，它不会跟踪每一个值，而是给你变化值的信息，并且新值旧值都会明确展示出来。

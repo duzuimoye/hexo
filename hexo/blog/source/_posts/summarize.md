@@ -1381,3 +1381,14 @@ export default {
 3：新增的生命周期 onRenderTracked 状态跟踪 onRenderTriggered 状态触发
 onRenderTracked 状态跟踪，它会跟踪页面上所有响应式变量和方法的状态。
 onRenderTriggered 状态触发，它不会跟踪每一个值，而是给你变化值的信息，并且新值旧值都会明确展示出来。
+
+4: watch 监听多个值
+当 watch 监听多个值时，不需要写多个 watch 函数，可以传入数组的形式。
+
+```
+ watch([overText, () => data.selectGirl], (newValue, oldValue) => {
+      console.log(`new--->${newValue}`);
+      console.log(`old--->${oldValue}`);
+      document.title = newValue[0];  //返回的newValue也是一个数组
+  });
+```

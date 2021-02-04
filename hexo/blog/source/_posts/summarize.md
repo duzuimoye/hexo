@@ -1331,6 +1331,10 @@ import ‘dayjs/locale/zh-cn’
 
 dayjs(time) .locale(‘zh-cn’) .format(‘周 dd’)
 
+# 115 css 属性
+
+page-break-after: always 分页符
+
 # 115 vue3.0 学习
 
 1:setup 函数的用法，可以代替 vue2.0 中的 data 和 methods 属性，直接把逻辑写在 set 里就可以。
